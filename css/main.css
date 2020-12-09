@@ -13,10 +13,8 @@ a {
 li {
     list-style: none;
 }
-/* Сброс стандартных стилей 
-=================================== */
 
-/* 
+/* Шрифты
 font-family: 'Cardo', serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif;  
@@ -25,4 +23,125 @@ font-family: 'Raleway', sans-serif;
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
+}
+
+/* Контейнер 
+=================================== */
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Шапка 
+=================================== */
+.header {
+    width: 100%;
+    height: 750px;
+    background-image: url(../img/header_bg.jpg);
+    background-size: cover;
+}
+
+/* Верхнее меню 
+=================================== */
+.header__logo img {
+    display: block;
+}
+.header__menu-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #4c5069;
+}
+.header__menu a{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    color: #fff;
+    opacity: .75;
+}
+.header__menu a:not(:first-child) {
+    margin-left: 60px;
+}
+.header__menu a:hover {
+    opacity: 1;
+}
+
+/* Интро тексты в шапке
+=================================== */
+.header__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 140px 100px 0;
+}
+
+.header__title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 65px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.header__slogan {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 70px;
+}
+
+/* Кнопка крассная
+=================================== */
+.btn {
+    padding: 14px 50px;
+    border: none;
+    background-color: #e84545;
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 1.6;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Секция фичи - features
+=================================== */
+.features {
+    padding: 125px 0 50px;
+}
+.features__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.features__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.3333%;
+    padding: 0 46px;
+    margin-bottom: 75px;
+}
+.features__icon {
+    display: block;
+    margin-bottom: 23px;
+}
+.features__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+.features__text {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+    text-align: center;
 }
