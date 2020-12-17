@@ -29,8 +29,9 @@ body {
 =================================== */
 .container {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Шапка 
@@ -38,6 +39,7 @@ body {
 .header {
     width: 100%;
     height: 750px;
+    background-color: #242947;
     background-image: url(../img/header_bg.jpg);
     background-size: cover;
 }
@@ -55,17 +57,21 @@ body {
     height: 100px;
     border-bottom: 1px solid #4c5069;
 }
-.header__menu a{
+.header__menu {
+    display: flex;
+    align-items: center;
+}
+.header__menu__link{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 13px;
     color: #fff;
     opacity: .75;
 }
-.header__menu a:not(:first-child) {
+.header__menu__link:not(:first-child) {
     margin-left: 60px;
 }
-.header__menu a:hover {
+.header__menu__link:hover {
     opacity: 1;
 }
 
@@ -120,6 +126,47 @@ body {
 .btn--download {
     padding: 14px 83px;
 }
+
+/* Бургер
+=================================== */
+.burger {
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+}
+.burger__item {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    opacity: .75;
+}
+.burger__item::before,
+.burger__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;    
+}
+.burger__item::before {
+    top: 0px;
+    
+}
+.burger__item::after{
+    bottom: 0;
+}
+.burger:hover .burger__item {
+    opacity: 1;
+}
 /* Секция фичи - features
 =================================== */
 .features {
@@ -173,10 +220,9 @@ body {
     display: block;
     position: absolute;
     top: 50%;
-    left: 50%;
     width: 100%;
     height: 100%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translateY(-50%);
 }
 .works__content {
     display: flex;
@@ -215,13 +261,14 @@ body {
 }
 .team__inner {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .team__item {
-    width: 270px;
+    width: calc(25% - 24px);
 }
 .team__item + .team__item {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 .teammate__photo {
     display: block;
@@ -253,6 +300,7 @@ body {
 =================================== */
 .social {
     display: flex;
+    width: 126px;
 }
 .social__link {
     display: flex;
@@ -279,32 +327,43 @@ body {
     fill: #000;
 }
 
-/* Отзывы клиентов - Clients
+/* Отзывы клиентов - reviews
 =================================== */
-.clients {
+.reviews {
+    background-color: #53354a;
+}
+.reviews__inner {
     display: flex;
-    width: 100%;
+    
 }
-.clients__photo {
-    display: block;
+.review__photo {
+    position: relative;
     width: 50%;
+    height: 500px;
 }
-.clients__content {
+.review__image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translateY(-50%);
+}
+.review__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #53354a;
+    padding-left: 85px;
     width: 50%;
-    padding: 0 200px 0 82px;
 }
-.clients__review {
+.review__text {
     font-family: 'Cardo', serif;
     font-size: 36px;
+    font-weight: 400;
     line-height: 1.16;
     color: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 40px;    
 }
-.clients__data {
+.review__author {
     font-size: 13px;
     line-height: 1.16;
     font-weight: 700;
@@ -320,6 +379,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 100px 0;
+    text-align: center;
 }
 .download__title {
     font-size: 28px;
@@ -348,6 +408,9 @@ body {
     display: flex;
     background-color: #3a3e64;    
     width: 100%;
+}
+.footer__con:last-child {
+    padding: 0 20px;
 }
 .footer__con {
     display: flex;
@@ -408,4 +471,171 @@ body {
 .footer__copyright__text span {
     color: #c8c9d1;
     font-weight: 400;
+}
+
+/* Медиа запросы
+=================================== */
+@media (max-width: 1200px) {
+/* Works - работы */    
+    .works__item {
+        width: 50%;
+    }
+/* Отзывы - review */    
+    .review__content {
+        padding: 0 40px;
+    }  
+/* footer */     
+    .footer__data_about {
+        width: auto
+    }
+}
+@media (max-width: 900px) {
+/* Шапка */
+    .header {
+        height: auto;
+    }
+    .header__intro {
+        padding: 60px 20px;
+    }
+/* Верхнее меню */
+    .burger {
+        display: flex;
+    }
+    .header__menu__link {
+        display: none;
+    }
+/* Заголовок шапки и слоган */
+    .header__title {
+        font-size: 50px;
+    }
+    .header__slogan {
+        margin-bottom: 40px;
+    }
+/* Features - фичи */    
+    .features {
+        padding: 75px 0 0 0;
+    }
+    .features__item {
+        width: 50%;
+    }
+/* Team - команда */
+    .team__inner {
+        justify-content: space-evenly;
+    }
+    .team__item {
+        width: 40%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .social {
+        margin: 0 auto;
+    }
+/* Отзывы - review */    
+    .reviews__inner {
+        flex-direction: column;
+    }     
+    .review__photo {
+        width: 100%;
+        overflow: hidden;
+        margin-top: 15px;        
+    }
+    .review__image {
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    .review__content {
+        width: 100%;
+        padding: 40px 0;
+    }
+    .review__text {
+        margin-bottom: 20px;    
+    }    
+}   
+@media (max-width: 700px) {
+    /* Шапка */
+    /* Заголовок шапки и слоган */
+    .header__title {
+        font-size: 40px;
+    }
+    .header__slogan {
+        margin-bottom: 18px;
+    }
+    .header__intro {
+        padding: 40px 0;
+    }
+    /* Features - фичи */    
+    .features {
+        padding: 75px 0 0 0;
+    }
+    .features__item {
+        width: 100%;
+    } 
+    /* Works - работы */    
+    .works__item {
+        width: 100%;
+        height: 400px;
+        background-size: cover;
+    }   
+/* Team - команда */
+    .team {
+        padding: 50px 0 25px;
+    }
+    .team__inner {
+        justify-content: space-evenly;
+    }
+    .team__item {
+        width: 60%;
+        text-align: center;
+        margin: 0 0 25px 0;
+    }
+    .team__item + .team__item {
+        margin: 0 0 25px 0;
+    }
+    .social {
+        margin: 0 auto;
+    }
+/* Секция загрузки - download */
+    .downloads {
+        padding: 60px 0;
+    }      
+/* footer */
+    .footer__data {
+        flex-direction: column;
+        padding: 40px 0;
+    }  
+    .footer__con {
+        width: 100%;
+    } 
+    .footer__con:first-child {
+        margin-bottom: 13px;
+    }
+    .footer__social {
+        margin-bottom: 19px;
+    }  
+}
+@media (max-width: 480px) { 
+/* Works - работы */    
+    .works__item {
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+    }      
+/* Team - команда */
+    .team__item {
+        width: 85%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+/* Секция загрузки - download */
+    .download__title {
+        font-size: 26px;
+    }
+/* Отзывы - review */    
+    .review__text {
+        font-size: 32px;   
+    } 
+/* footer */
+    .footer__copyright__text {
+        margin: 0 15px;
+    }            
 }

@@ -14,11 +14,14 @@
             <section class="header__menu-con">
                 <a href="#" class="header__logo"><img src="/img/logo.png" alt=""></a>
                 <nav class="header__menu">
-                    <a href="#">Features</a>
-                    <a href="#">Works</a>
-                    <a href="#">Our Team</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Download</a>
+                    <a href="#" class="header__menu__link">Features</a>
+                    <a href="#" class="header__menu__link">Works</a>
+                    <a href="#" class="header__menu__link">Our Team</a>
+                    <a href="#" class="header__menu__link">Testimonials</a>
+                    <a href="#" class="header__menu__link">Download</a>
+                    <button class="burger" type="button">
+                        <span class="burger__item"></span>
+                    </button>
                 </nav>
             </section>
             <section class="header__intro">
@@ -250,13 +253,19 @@
         </div><!-- /.container -->
     </section><!-- /.team -->
    <!-- Clients -->
-    <section class="clients">
-        <img src="img/clients/1.jpg" alt="" class="clients__photo">
-        <div class="clients__content">
-            <p class="clients__review">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
-            <div class="clients__data">Susan Sims, Interaction Designer at XYZ</div>
-        </div>
-    </section>
+    <section class="reviews">
+        <div class="container">
+            <div class="reviews__inner">
+                <div class="review__photo">
+                    <img src="img/clients/1.jpg" alt="" class="review__image">
+                </div>
+                <div class="review__content">
+                    <h3 class="review__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h3>
+                    <p class="review__author">Susan Sims, Interaction Designer at XYZ</p>
+                </div>
+            </div><!-- /.reviews__inner -->
+        </div><!-- /.container -->
+    </section><!-- /.reviews -->
     <!-- downloads -->
     <section class="downloads">
         <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
