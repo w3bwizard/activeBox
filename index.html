@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
-            <section class="header__menu-con">
-                <a href="#" class="header__logo"><img src="/img/logo.png" alt=""></a>
-                <nav class="header__menu">
-                    <a href="#" class="header__menu__link">Features</a>
-                    <a href="#" class="header__menu__link">Works</a>
-                    <a href="#" class="header__menu__link">Our Team</a>
-                    <a href="#" class="header__menu__link">Testimonials</a>
-                    <a href="#" class="header__menu__link">Download</a>
-                    <button class="burger" type="button">
+            <section class="header__menu-con" id="header__menu-con">
+                <div class="header__menu-inner">
+                    <a href="#" class="header__logo"><img src="/img/logo.png" alt=""></a>
+                    <nav class="header__menu" id="header__menu">
+                        <a href="#" class="header__menu__link" data-scroll="#features">Features</a>
+                        <a href="#" class="header__menu__link" data-scroll="#works">Works</a>
+                        <a href="#" class="header__menu__link" data-scroll="#team">Our Team</a>
+                        <a href="#" class="header__menu__link" data-scroll="#reviews">Testimonials</a>
+                        <a href="#" class="header__menu__link" data-scroll="#downloads">Download</a>
+                    </nav>
+                    <button class="burger" type="button" id="navToggle">
                         <span class="burger__item"></span>
-                    </button>
-                </nav>
+                    </button>                    
+                </div>
             </section>
             <section class="header__intro">
                 <h1 class="header__title">Your Favorite One Page Multi Purpose Template</h1>
@@ -58,7 +61,7 @@
         </symbol>                
     </svg>
     <!-- features -->
-    <section class="features"> 
+    <section class="features" id="features"> 
         <div class="container">
             <div class="features__inner">
                 <div class="features__item">
@@ -95,7 +98,7 @@
         </div>  <!-- /.container -->
     </section>
     <!-- Works -->
-    <section class="works"> 
+    <section class="works" id="works"> 
         <div class="works__item">
             <img src="img/works/1.jpg" alt="" class="works__image">
             <div class="works__content">
@@ -154,7 +157,7 @@
         </div>                                 
     </section>
     <!-- Our team -->
-    <section class="team">
+    <section class="team" id="team">
         <div class="container">
             <div class="team__inner">
                 <div class="team__item">
@@ -253,7 +256,7 @@
         </div><!-- /.container -->
     </section><!-- /.team -->
    <!-- Clients -->
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <div class="reviews__inner">
                 <div class="review__photo">
@@ -267,7 +270,7 @@
         </div><!-- /.container -->
     </section><!-- /.reviews -->
     <!-- downloads -->
-    <section class="downloads">
+    <section class="downloads" id="downloads">
         <h3 class="download__title">Are You Ready to Start? Download Now For Free!</h3>
         <div class="download__slogan">Fusce dapibus, tellus ac cursus commodo</div>
         <button class="btn btn--red btn--download">Download Here</button>
@@ -315,5 +318,7 @@
             </p>
         </div>
     </footer>
+<!-- Javascript -->
+<script src="js/main.js"></script>    
 </body>
 </html>
