@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
@@ -255,18 +256,34 @@
             </div><!-- /.team__inner -->
         </div><!-- /.container -->
     </section><!-- /.team -->
-   <!-- Clients -->
+   <!-- Reviews -->
     <section class="reviews" id="reviews">
         <div class="container">
-            <div class="reviews__inner">
-                <div class="review__photo">
-                    <img src="img/clients/1.jpg" alt="" class="review__image">
+            <div class="reviews__slider" id="reviewsSlider">
+                <div class="slick-item">
+                    <div class="reviews__inner">
+                        <div class="review__photo">
+                            <img src="img/clients/1.jpg" alt="" class="review__image">
+                        </div>
+                        <div class="review__content">
+                            <h3 class="review__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h3>
+                            <p class="review__author">Susan Sims, Interaction Designer at XYZ</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="review__content">
-                    <h3 class="review__text">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</h3>
-                    <p class="review__author">Susan Sims, Interaction Designer at XYZ</p>
-                </div>
-            </div><!-- /.reviews__inner -->
+
+                <div class="slick-item">
+                    <div class="reviews__inner">
+                        <div class="review__photo">
+                            <img src="img/clients/2.jpg" alt="" class="review__image">
+                        </div>
+                        <div class="review__content">
+                            <h3 class="review__text">“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sapiente qui culpa aliquid fugit at veritatis.”</h3>
+                            <p class="review__author">Angelina Jolie, Tomb Rider, Secret Agent & Killer</p>
+                        </div>
+                    </div>
+                </div>              
+            </div><!-- /.reviews__slider -->
         </div><!-- /.container -->
     </section><!-- /.reviews -->
     <!-- downloads -->
@@ -319,6 +336,7 @@
         </div>
     </footer>
 <!-- Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>    
 </body>
 </html>

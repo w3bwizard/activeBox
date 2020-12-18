@@ -367,9 +367,37 @@ body {
 .reviews {
     background-color: #53354a;
 }
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+.slick-dots {
+    display: flex;
+    justify-content: center;
+}
+.slick-dots li {
+    margin: 0 0 5px 5px;
+}
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    font-size: 0px;
+    color: transparent;
+    background-color: #fff;
+    opacity: .6;
+    box-shadow: 0 0 5px #262626;
+}
+.slick-dots .slick-active button {
+    opacity: 1;
+}
 .reviews__inner {
     display: flex;
-    
+    overflow: hidden;
 }
 .review__photo {
     position: relative;
