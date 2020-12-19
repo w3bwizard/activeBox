@@ -57,16 +57,12 @@ body {
     height: 100px;
     border-bottom: 1px solid #4c5069;
 }
-.header__menu-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.fixed__menu {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    display: flex;
+    align-items: center;
 }
-.header__menu-con.fixed {
+.fixed__menu.fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -74,6 +70,16 @@ body {
     background-color: #2b324f;
     height: 61px;
     z-index: 3;
+    padding: 0 15px;
+}
+.header__menu-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 0 15px; */
 }
 .header__menu {
     display: flex;
@@ -377,6 +383,10 @@ body {
 .slick-dots {
     display: flex;
     justify-content: center;
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 25%;
 }
 .slick-dots li {
     margin: 0 0 5px 5px;
@@ -560,6 +570,9 @@ body {
     .header__intro {
         padding: 60px 20px;
     }
+    .header__slogan {
+        font-size: 20px;
+    }
 /* Верхнее меню */
     .burger {
         display: flex;
@@ -599,8 +612,7 @@ body {
     }     
     .review__photo {
         width: 100%;
-        overflow: hidden;
-        margin-top: 15px;        
+        overflow: hidden;       
     }
     .review__image {
         left: 50%;
@@ -608,11 +620,14 @@ body {
     }
     .review__content {
         width: 100%;
-        padding: 40px 0;
+        padding: 40px 20px;
     }
     .review__text {
         margin-bottom: 20px;    
-    }    
+    } 
+    .slick-dots {
+        right:calc(50% - 20px) ;
+    }   
 }   
 @media (max-width: 700px) {
 /* Шапка */
@@ -620,7 +635,8 @@ body {
         font-size: 40px;
     }
     .header__slogan {
-        margin-bottom: 18px;
+        margin-bottom: 25px;
+        font-size: 18px;
     }
     .header__intro {
         padding: 40px 0;
@@ -676,6 +692,9 @@ body {
     }  
 }
 @media (max-width: 480px) { 
+    .header__title {
+        font-size: 32px;
+    }
 /* Works - работы */    
     .works__item {
         width: 100%;
@@ -694,8 +713,14 @@ body {
     }
 /* Отзывы - review */    
     .review__text {
-        font-size: 32px;   
+        font-size: 26px;   
     } 
+    .review__photo {
+        height: 400px;
+    }
+    .review__content {
+        padding: 20px;
+    }
 /* footer */
     .footer__copyright__text {
         margin: 0 15px;

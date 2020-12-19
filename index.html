@@ -14,18 +14,20 @@
     <header class="header" id="header">
         <div class="container">
             <section class="header__menu-con" id="header__menu-con">
-                <div class="header__menu-inner">
-                    <a href="#" class="header__logo"><img src="/img/logo.png" alt=""></a>
-                    <nav class="header__menu" id="header__menu">
-                        <a href="#" class="header__menu__link" data-scroll="#features">Features</a>
-                        <a href="#" class="header__menu__link" data-scroll="#works">Works</a>
-                        <a href="#" class="header__menu__link" data-scroll="#team">Our Team</a>
-                        <a href="#" class="header__menu__link" data-scroll="#reviews">Testimonials</a>
-                        <a href="#" class="header__menu__link" data-scroll="#downloads">Download</a>
-                    </nav>
-                    <button class="burger" type="button" id="navToggle">
-                        <span class="burger__item"></span>
-                    </button>                    
+                <div class="fixed__menu" id="fixed__menu">
+                    <div class="header__menu-inner">
+                        <a href="#" class="header__logo"><img src="/img/logo.png" data-scroll="#header" alt=""></a>
+                        <nav class="header__menu" id="header__menu">
+                            <a href="#" class="header__menu__link" data-scroll="#features">Features</a>
+                            <a href="#" class="header__menu__link" data-scroll="#works">Works</a>
+                            <a href="#" class="header__menu__link" data-scroll="#team">Our Team</a>
+                            <a href="#" class="header__menu__link" data-scroll="#reviews">Testimonials</a>
+                            <a href="#" class="header__menu__link" data-scroll="#downloads">Download</a>
+                        </nav>
+                        <button class="burger" type="button" id="navToggle">
+                            <span class="burger__item"></span>
+                        </button>                    
+                    </div>
                 </div>
             </section>
             <section class="header__intro">
@@ -258,7 +260,6 @@
     </section><!-- /.team -->
    <!-- Reviews -->
     <section class="reviews" id="reviews">
-        <div class="container">
             <div class="reviews__slider" id="reviewsSlider">
                 <div class="slick-item">
                     <div class="reviews__inner">
@@ -279,12 +280,11 @@
                         </div>
                         <div class="review__content">
                             <h3 class="review__text">“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque sapiente qui culpa aliquid fugit at veritatis.”</h3>
-                            <p class="review__author">Angelina Jolie, Tomb Rider, Secret Agent & Killer</p>
+                            <p class="review__author">Angelina Jolie, Tomb Raider, Secret Agent & Killer</p>
                         </div>
                     </div>
                 </div>              
             </div><!-- /.reviews__slider -->
-        </div><!-- /.container -->
     </section><!-- /.reviews -->
     <!-- downloads -->
     <section class="downloads" id="downloads">
@@ -335,7 +335,7 @@
             </p>
         </div>
     </footer>
-<!-- Javascript -->
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>    
 </body>

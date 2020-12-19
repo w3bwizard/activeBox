@@ -1,27 +1,33 @@
 $(function () {
 
-    let header = $("#header__menu-con");
+    let header = $(".fixed__menu");
     let intro = $("#header");
-    let introH = intro.innerHeight();
+    let introH = intro.innerHeight().toFixed();
     let scrollPos = $(window).scrollTop();
     let nav = $("#header__menu");
     let navToggle = $("#navToggle");
 
     checkScroll(scrollPos, introH);
+    console.log('introH=' + introH);
+    console.log('scrollPos=' + scrollPos);
 
     /* Фиксированное верхнее меню */
     $(window).on("scroll resize", function () {
-        introH = intro.innerHeight();
-        scrollPos = $(this).scrollTop();
-        console.log(introH);
-        console.log(scrollPos);
+        introH = intro.innerHeight().toFixed();
+        scrollPos = $(this).scrollTop().toFixed();
+
+        console.log('introH=' + introH);
+        console.log('scrollPos=' + scrollPos);
+
         checkScroll(scrollPos, introH);
     });
 
     function checkScroll(scrollPos, introH) {
-        if (scrollPos >= introH - 62) {
+        if (scrollPos > introH - 62) {
+            console.log('Fixed add');
             header.addClass("fixed");
         } else {
+            console.log('Fixed remove');
             header.removeClass("fixed");
         }
     }
@@ -67,6 +73,7 @@ $(function () {
         slidesToScroll: 1,
         fade: false,
         arrows: false,
-        dots: true
+        dots: true,
+        autoplay: true
     });
 });
