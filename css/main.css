@@ -715,11 +715,12 @@ body {
     .review__text {
         font-size: 26px;   
     } 
-    .review__photo {
-        height: 400px;
-    }
     .review__content {
-        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        padding: 20px 20px 30px;
+        width: 100vw;
+        background-color: #53354a8a;
     }
 /* footer */
     .footer__copyright__text {
