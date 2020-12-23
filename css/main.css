@@ -46,6 +46,9 @@ body {
 
 /* Верхнее меню 
 =================================== */
+.header__logo {
+    -webkit-tap-highlight-color:  transparent;
+}
 .header__logo img {
     display: block;
 }
@@ -89,11 +92,14 @@ body {
     position: absolute;
     flex-direction: column;
     align-items: stretch;
-    bottom: -195px;
+    bottom: -196px;
     right: 0;
     background-color: #2b324f;
     z-index: 3;
 
+}
+.fixed__menu.fixed .header__menu.show {
+    bottom: -195px;
 }
 .header__menu.show > .header__menu__link {
     display: block;
@@ -165,7 +171,9 @@ body {
 .btn--download {
     padding: 14px 83px;
 }
-
+.btn:focus {
+    outline: none;
+}
 /* Бургер
 =================================== */
 .burger {
@@ -177,6 +185,10 @@ body {
     border: 1px solid transparent;
     background: transparent;
     cursor: pointer;
+    -webkit-tap-highlight-color:  transparent;
+}
+.burger:focus, .burger:active {
+    outline: none;
 }
 .burger__item {
     display: block;
@@ -389,7 +401,7 @@ body {
     right: 25%;
 }
 .slick-dots li {
-    margin: 0 0 5px 5px;
+    margin: 0 0 8px 5px;
 }
 .slick-dots button {
     width: 15px;
@@ -401,6 +413,9 @@ body {
     background-color: #fff;
     opacity: .6;
     box-shadow: 0 0 5px #262626;
+}
+.slick-dots button:focus {
+    outline: none;
 }
 .slick-dots .slick-active button {
     opacity: 1;
@@ -692,15 +707,27 @@ body {
     }  
 }
 @media (max-width: 480px) { 
+/* Хедер */     
     .header__title {
         font-size: 32px;
+    }
+/* Фичи */
+    .features {
+        padding: 50px 0 0 0;
+    }
+    .features__item {
+        padding: 0 20px;
+    }
+    .features__item:last-child {
+        margin-bottom: 50px;
     }
 /* Works - работы */    
     .works__item {
         width: 100%;
-        height: 300px;
+        height: 280px;
         background-size: cover;
-    }      
+        margin-bottom: 1px;
+    }
 /* Team - команда */
     .team__item {
         width: 85%;
@@ -721,6 +748,10 @@ body {
         padding: 20px 20px 30px;
         width: 100vw;
         background-color: #53354a8a;
+    }
+/* downloads */     
+    .downloads {
+        padding: 60px 20px;
     }
 /* footer */
     .footer__copyright__text {

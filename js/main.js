@@ -8,16 +8,13 @@ $(function () {
     let navToggle = $("#navToggle");
 
     checkScroll(scrollPos, introH);
-    console.log('introH=' + introH);
-    console.log('scrollPos=' + scrollPos);
 
     /* Фиксированное верхнее меню */
     $(window).on("scroll resize", function () {
         introH = intro.innerHeight().toFixed();
         scrollPos = $(this).scrollTop().toFixed();
 
-        console.log('introH=' + introH);
-        console.log('scrollPos=' + scrollPos);
+        nav.removeClass("show");
 
         checkScroll(scrollPos, introH);
     });
@@ -59,7 +56,7 @@ $(function () {
         var menu = $("#header__menu"); // тут указываем ID элемента
         var burger = $("#navToggle");
         if (!menu.is(e.target), !burger.is(e.target) // если клик был не по нашему блоку
-            && menu.has(e.target).length === 0) { // и не по его дочерним элементам
+            && menu.has(e.target).length, burger.has(e.target).length === 0) { // и не по его дочерним элементам
             nav.removeClass("show");// скрываем его
         }
     });
