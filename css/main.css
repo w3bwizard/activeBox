@@ -13,7 +13,16 @@ a {
 li {
     list-style: none;
 }
-
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
+}
 /* Шрифты
 font-family: 'Cardo', serif;
 font-family: 'Open Sans', sans-serif;
@@ -47,7 +56,16 @@ body {
 /* Верхнее меню 
 =================================== */
 .header__logo {
+    display: block;
+    width: 189px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-image: url(../img/logo.png);
     -webkit-tap-highlight-color:  transparent;
+    -moz-user-select: none;    
 }
 .header__logo img {
     display: block;
@@ -174,6 +192,9 @@ body {
 .btn:focus {
     outline: none;
 }
+.btn::-moz-focus-inner {
+    border: 0;
+  }
 /* Бургер
 =================================== */
 .burger {
